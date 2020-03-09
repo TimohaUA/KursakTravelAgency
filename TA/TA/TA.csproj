@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B81727F-C856-457D-AE03-0BD721A63075}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TA</RootNamespace>
+    <AssemblyName>TA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BLL\Comands\ButtonAddCencel.cs" />
+    <Compile Include="BLL\Comands\ButtonAddClient.cs" />
+    <Compile Include="BLL\Comands\ButtonAddOk.cs" />
+    <Compile Include="BLL\Comands\ButtonDelClient.cs" />
+    <Compile Include="BLL\Hotell.cs" />
+    <Compile Include="BLL\HelpClasses\HotellInfo.cs" />
+    <Compile Include="BLL\ShowPlace.cs" />
+    <Compile Include="BLL\HelpClasses\ShowPlaceInfo.cs" />
+    <Compile Include="UI\AddClient.xaml.cs">
+      <DependentUpon>AddClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Comands\ButtonOKredag.cs" />
+    <Compile Include="BLL\Comands\ButtonCencel.cs" />
+    <Compile Include="BLL\Comands\ButtonClick.cs" />
+    <Compile Include="BLL\EndedTours.cs" />
+    <Compile Include="BLL\NextTours.cs" />
+    <Compile Include="UI\RadagClient.xaml.cs">
+      <DependentUpon>RadagClient.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UI\AddClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Clients.cs" />
+    <Compile Include="BLL\ProfilWorker.cs" />
+    <Compile Include="DAL\AgencyWorker.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ArchiveOfEndedTour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\City.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Client.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Country.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Helper\DbHelper.cs" />
+    <Compile Include="DAL\Hotel.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ImagesHotel.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ImagesShowPlace.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ListClientShowInfoTour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ListOfTouristBuy.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PointInTour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ResponsibleForTheCountry.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ResponsibleForTheTour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ShowPlace.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TAContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TAContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TAContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TAContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TAContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Tour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\WaysInTour.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\WaysOfTransportation.cs">
+      <DependentUpon>TAContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UI\RadagClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="DAL\TAContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TAContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\TAContext.edmx.diagram">
+      <DependentUpon>TAContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\TAContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TAContext.Context.cs</LastGenOutput>
+      <DependentUpon>TAContext.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\TAContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TAContext.edmx</DependentUpon>
+      <LastGenOutput>TAContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

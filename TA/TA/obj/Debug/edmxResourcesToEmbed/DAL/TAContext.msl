@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TravelAgencyModelContainer" CdmEntityContainer="TravelAgencyEntities">
+    <EntitySetMapping Name="AgencyWorkers">
+      <EntityTypeMapping TypeName="TravelAgencyModel.AgencyWorker">
+        <MappingFragment StoreEntitySet="AgencyWorker">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="DateOfRecruitment" ColumnName="DateOfRecruitment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArchiveOfEndedTours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ArchiveOfEndedTour">
+        <MappingFragment StoreEntitySet="ArchiveOfEndedTours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="TravelAgencyModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="TravelAgencyModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TravelAgencyModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="TravelAgencyModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HotelsName" ColumnName="HotelsName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="PriceDay" ColumnName="PriceDay" />
+          <ScalarProperty Name="Stars" ColumnName="Stars" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagesHotels">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ImagesHotel">
+        <MappingFragment StoreEntitySet="ImagesHotels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="HotelsId" ColumnName="HotelsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagesShowPlaces">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ImagesShowPlace">
+        <MappingFragment StoreEntitySet="ImagesShowPlace">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="ShowPlaceId" ColumnName="ShowPlaceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListClientShowInfoTours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ListClientShowInfoTour">
+        <MappingFragment StoreEntitySet="ListClientShowInfoTour">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListOfTouristBuys">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ListOfTouristBuy">
+        <MappingFragment StoreEntitySet="ListOfTouristBuy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PointInTours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.PointInTour">
+        <MappingFragment StoreEntitySet="PointInTours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShowPlaceId" ColumnName="ShowPlaceId" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+          <ScalarProperty Name="DateOfVisit" ColumnName="DateOfVisit" />
+          <ScalarProperty Name="IsPriceInTours" ColumnName="IsPriceInTours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResponsibleForTheCountries">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ResponsibleForTheCountry">
+        <MappingFragment StoreEntitySet="ResponsibleForTheCountry">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="AgencyWorkerId" ColumnName="AgencyWorkerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResponsibleForTheTours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ResponsibleForTheTour">
+        <MappingFragment StoreEntitySet="ResponsibleForTheTours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+          <ScalarProperty Name="AgencyWorkerId" ColumnName="AgencyWorkerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowPlaces">
+      <EntityTypeMapping TypeName="TravelAgencyModel.ShowPlace">
+        <MappingFragment StoreEntitySet="ShowPlace">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShowPlaceName" ColumnName="ShowPlaceName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.Tour">
+        <MappingFragment StoreEntitySet="Tours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourName" ColumnName="TourName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="MaxTourists" ColumnName="MaxTourists" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaysInTours">
+      <EntityTypeMapping TypeName="TravelAgencyModel.WaysInTour">
+        <MappingFragment StoreEntitySet="WaysInTours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToursId" ColumnName="ToursId" />
+          <ScalarProperty Name="StartCityId" ColumnName="StartCityId" />
+          <ScalarProperty Name="EndCityId" ColumnName="EndCityId" />
+          <ScalarProperty Name="WaysOfTransportationId" ColumnName="WaysOfTransportationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaysOfTransportations">
+      <EntityTypeMapping TypeName="TravelAgencyModel.WaysOfTransportation">
+        <MappingFragment StoreEntitySet="WaysOfTransportation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameTransport" ColumnName="NameTransport" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
